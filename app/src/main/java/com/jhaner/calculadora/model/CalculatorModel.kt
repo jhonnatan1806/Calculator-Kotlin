@@ -16,7 +16,14 @@ class CalculatorModel {
 
             when {
                 // Handle numbers including decimals
-                token.isDigit() || (token == '.' && (i == 0 || tokens[i - 1] == '(' || tokens[i - 1] == '+' || tokens[i - 1] == '-' || tokens[i - 1] == '*' || tokens[i - 1] == '/')) -> {
+                token.isDigit() || (token == '.' &&
+                            (   i == 0 ||
+                                tokens[i - 1] == '(' ||
+                                tokens[i - 1] == '+' ||
+                                tokens[i - 1] == '-' ||
+                                tokens[i - 1] == '*' ||
+                                tokens[i - 1] == '/' )
+                        ) -> {
                     val stringBuffer = StringBuffer()
                     // If it's a decimal point, handle leading zero if necessary
                     if (token == '.') {
