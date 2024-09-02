@@ -46,6 +46,7 @@ class OperationPresenter(
 
     fun onClearPressed() {
         currentOperation = ""
+        isResultDisplayed = false
         view.updateOperationDisplay("")
         view.updateResult("")
     }
@@ -59,6 +60,7 @@ class OperationPresenter(
 
     fun onParenthesisPressed(parenthesis: String) {
         currentOperation += parenthesis
+        isResultDisplayed = false
         view.updateOperationDisplay(currentOperation)
     }
 }
