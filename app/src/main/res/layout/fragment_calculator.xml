@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- TextView para el historial -->
+    <TextView
+        android:id="@+id/txtHistory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:maxLines="1"
+        android:padding="8dp"
+        android:text="History"
+        android:textSize="16sp" />
+
+    <!-- TextView para la operación actual -->
+    <TextView
+        android:id="@+id/txtOperation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="32sp"
+        android:gravity="end"
+        android:padding="8dp"
+        android:textColor="@android:color/black"
+        android:maxLines="1" />
+
+    <!-- Botones de la calculadora -->
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="4"
+        android:rowCount="6"
+        android:layout_marginTop="16dp">
+
+        <!-- Primera fila de botones (C, Del, (), *) -->
+        <Button
+            android:id="@+id/btnClear"
+            android:text="C"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_marginEnd="10dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:background="@drawable/button_background" />
+
+        <Button
+            android:id="@+id/btnDelete"
+            android:text="Del"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_marginEnd="10dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:background="@drawable/button_background" />
+
+        <Button
+            android:id="@+id/btnParenthesis"
+            android:text="("
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_marginEnd="10dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:background="@drawable/button_background" />
+
+        <Button
+            android:id="@+id/btnMultiply"
+            android:text="*"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:background="@drawable/button_background" />
+
+        <!-- Segunda fila de botones (7, 8, 9, +) -->
+        <Button
+            android:id="@+id/btnDigit7"
+            android:text="7"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:background="@drawable/button_background" />
+
+        <Button
+            android:id="@+id/btnDigit8"
+            android:text="8"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:background="@drawable/button_background" />
+
+        <Button
+            android:id="@+id/btnDigit9"
+            android:text="9"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:background="@drawable/button_background" />
+
+        <Button
+            android:id="@+id/btnAdd"
+            android:text="+"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_marginTop="10dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:background="@drawable/button_background" />
+
+        <!-- Tercera fila de botones (4, 5, 6, -) -->
+        <Button
+            android:id="@+id/btnDigit4"
+            android:text="4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:background="@drawable/button_background"/>
+
+        <Button
+            android:id="@+id/btnDigit5"
+            android:text="5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:background="@drawable/button_background"/>
+
+        <Button
+            android:id="@+id/btnDigit6"
+            android:text="6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:background="@drawable/button_background" />
+
+        <Button
+            android:id="@+id/btnSubtract"
+            android:text="-"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_marginTop="10dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:background="@drawable/button_background" />
+
+        <!-- Cuarta fila de botones (1, 2, 3, /) -->
+        <Button
+            android:id="@+id/btnDigit1"
+            android:text="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:background="@drawable/button_background" />
+
+        <Button
+            android:id="@+id/btnDigit2"
+            android:text="2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:background="@drawable/button_background" />
+
+        <Button
+            android:id="@+id/btnDigit3"
+            android:text="3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:background="@drawable/button_background" />
+
+        <Button
+            android:id="@+id/btnDivide"
+            android:text="/"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_marginTop="10dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:background="@drawable/button_background" />
+
+        <!-- Quinta fila de botones (., 0, =) -->
+        <Button
+            android:id="@+id/btnDecimal"
+            android:text="."
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:background="@drawable/button_background" />
+
+        <Button
+            android:id="@+id/btnDigit0"
+            android:text="0"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:background="@drawable/button_background" />
+
+        <Button
+            android:id="@+id/btnEquals"
+            android:text="="
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnSpan="2"
+            android:layout_columnWeight="2"
+            android:layout_marginTop="10dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:background="@drawable/button_background" />
+
+    </GridLayout>
+</LinearLayout>
