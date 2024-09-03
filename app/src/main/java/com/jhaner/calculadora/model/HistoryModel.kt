@@ -19,12 +19,12 @@ class HistoryModel {
         historyStack.clear()
     }
 
-    // Optional: Method to retrieve the last entry (useful if you need it)
+    // Method to retrieve the last entry
     fun getLastEntry(): String? {
         return if (historyStack.isNotEmpty()) historyStack.last() else null
     }
 
-    // Optional: Method to check if the history is empty
+    // Method to check if the history is empty
     fun isHistoryEmpty(): Boolean {
         return historyStack.isEmpty()
     }
